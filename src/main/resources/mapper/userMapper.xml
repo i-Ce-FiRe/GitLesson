@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+        <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.join.mapper.user.UserMapper">
+    <resultMap id="UserResult" type="com.join.entity.user.User">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="age" column="age"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+    <select id="queryByUsernameAndPassword" resultType="com.join.entity.user.User">
+        select * from t_ssm where name=#{username} and password =#{password}
+    </select>
+
+    <select id="queryByUsername" resultType="com.join.entity.user.User">
+        select * from t_ssm where name=#{username}
+    </select>
+
+    <insert id="addUser" parameterType="com.join.entity.user.User">
+        INSERT INTO t_ssm(name,age,password) value(#{username},#{age},#{password})  ;
+    </insert>
+
+</mapper>
