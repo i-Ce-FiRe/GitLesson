@@ -29,7 +29,6 @@ public class UserController {
      */
     @RequestMapping("/login")
     public String login(User user, Model model){
-        System.out.println("login1"+user);
         User u=userService.login(user.getUsername(),user.getPassword());
         if (u != null){
             model.addAttribute("user",u);
@@ -37,10 +36,10 @@ public class UserController {
         }
         else {
             List<User> users=userService.queryByUsername(user.getUsername());
-            if (users!=null){
+            if (users.size()!=0){
                 model.addAttribute("error","密码错误");
             }
-            else {
+            else{
                 model.addAttribute("error","该用户不存在");
             }
             return "WEB-INF/views/loginFail";

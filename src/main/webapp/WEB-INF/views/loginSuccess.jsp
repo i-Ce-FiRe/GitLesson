@@ -13,5 +13,7 @@
 <body>
 ${user.username}
 <p>登陆成功</p>
+
+<a href="${pageContext.request.contextPath}/admin/toLogin">管理员登录</a>
 </body>
 </html>

@@ -38,7 +38,7 @@ public class UserServiceImpl implements UserService {
      * @return
      */
     public List<User> queryByUsername(String username){
-        System.out.println(username);
+        System.out.println("搜索用户"+username);
         List<User> users=userMapper.queryByUsername(username);
         return users;
     }

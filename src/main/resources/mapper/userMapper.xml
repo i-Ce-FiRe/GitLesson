@@ -8,17 +8,17 @@
         <result property="age" column="age"/>
         <result property="password" column="password"/>
     </resultMap>
-
+<!--登录功能-->
     <select id="queryByUsernameAndPassword" resultType="com.join.entity.user.User">
         select * from t_ssm where name=#{username} and password =#{password}
     </select>
-
+<!--判断用户是否注册-->
     <select id="queryByUsername" resultType="com.join.entity.user.User">
         select * from t_ssm where name=#{username}
     </select>
-
+<!--注册功能-->
     <insert id="addUser" parameterType="com.join.entity.user.User">
-        INSERT INTO t_ssm(name,age,password) value(#{username},#{age},#{password})  ;
+        INSERT INTO t_ssm(name,age,password) value(#{username},#{age},#{password})
     </insert>
 
 </mapper>

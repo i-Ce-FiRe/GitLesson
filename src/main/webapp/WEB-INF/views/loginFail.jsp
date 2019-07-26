@@ -12,6 +12,6 @@
 </head>
 <body>
 <p>${error} 登录失败</p>
-
+<a href="/user/toLogin">重新登录</a>
 </body>
 </html>
