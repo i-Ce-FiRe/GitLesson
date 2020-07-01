@@ -23,7 +23,7 @@
     <dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
-      <version>8.0.11</version>
+      <version>8.0.16</version>
       <scope>runtime</scope>
     </dependency>
     <!--JDBC连接池，实现了数据源和JNDI绑定，支持JDBC3规范和JDBC2的标准扩展-->
